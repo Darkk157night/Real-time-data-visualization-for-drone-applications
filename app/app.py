@@ -108,8 +108,8 @@ class GyroscopeGUI:
 
                     # Update the plots
                     self.plot_ax.set_xlim(0, max(10, current_time))  # Keep the x-axis fixed to the last 10 seconds
-                    self.plot_ax.set_ylim(min(-20, min(gyro_x_data + gyro_y_data + gyro_z_data)) - 10, 
-                                         max(20, max(gyro_x_data + gyro_y_data + gyro_z_data)) + 10)  # Adjust y-axis limits
+                    self.plot_ax.set_ylim(min(-10, min(gyro_x_data + gyro_y_data + gyro_z_data)) - 5, 
+                                         max(10, max(gyro_x_data + gyro_y_data + gyro_z_data)) + 5)  # Adjust y-axis limits
                     self.line_x.set_data(time_data, gyro_x_data)
                     self.line_y.set_data(time_data, gyro_y_data)
                     self.line_z.set_data(time_data, gyro_z_data)
